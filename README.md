@@ -6,7 +6,7 @@ on Azure.
 To use:
 
 1. Spin up a kubernetes ACS cluster.  I recommend using the instructions with the Azure path on the [Deis Workflow site](https://deis.com/docs/workflow/quickstart/).
-Follow them at least through the installation and initialization of `helm`.
+Follow them at least through the installation and initialization of `helm`.  If you plan to use premium storage for your persistant volumes, choose a DS class machine versus a D class machine when you spin up the cluster.
 2. Create a storage account on Azure that this K8s storage class will create persistent volumes in.
 3. Create a top level container called 'vhds' in this storage acount (where persistent volumes will be stored).
 4. Edit azure-disk.yaml to provide a name (eg. 'fast'), data center location (eg. 'eastus'), and storage account name (eg. 'acspremium').
